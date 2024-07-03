@@ -59,7 +59,7 @@ namespace EdnaApi.Controllers
                     while (nret == 0)
                     {
                         nret = History.DnaGetNextHist(s, out dval, out timestamp, out status);
-                        if (status != null)
+                        if (!string.IsNullOrWhiteSpace(status))
                         {
                             historyResults.Add(new HistResult { Dval = dval, Timestamp = timestamp, Status = status });
                         }
