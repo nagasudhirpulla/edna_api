@@ -20,7 +20,7 @@ public class SoeController(IConfiguration configuration) : ControllerBase
         string format = "dd/MM/yyyy/HH:mm:ss";
         DateTime startDt = DateTime.ParseExact(strtime, format, CultureInfo.InvariantCulture);
         DateTime endDt = DateTime.ParseExact(endtime, format, CultureInfo.InvariantCulture);
-        string sqlQuery = "SELECT area, CATEGORY, LOCATION, TEXT, time_soe FROM eta_user.eta_user.SOE22 where time_soe between @st and @et order by time_soe desc";
+        string sqlQuery = "SELECT area, CATEGORY, LOCATION, TEXT, time_soe FROM eta_user.SOE22 where time_soe between @st and @et order by time_soe desc";
         using (var sqlConnection1 = new SqlConnection(_dbConnStr))
         {
             using var cmd = new SqlCommand()
