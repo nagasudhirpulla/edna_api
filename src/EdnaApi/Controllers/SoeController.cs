@@ -14,7 +14,7 @@ public class SoeController(IConfiguration configuration) : ControllerBase
 
     // GET api/soe?strtime=30/11/2016/00:00:00&endtime=30/11/2016/23:59:00
     [HttpGet(Name = "GetSoeData")]
-    public List<SoeResult> GetData(string? strtime = "16/07/2024/00:00:00", string? endtime = "16/07/2023/23:59:00")
+    public List<SoeResult> GetData(string? strtime = "16/07/2024/00:00:00", string? endtime = "16/07/2024/23:59:00")
     {
         List<SoeResult> results = [];
         string format = "dd/MM/yyyy/HH:mm:ss";
