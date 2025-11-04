@@ -35,7 +35,8 @@ SetupIconFile=favicon.ico
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "..\src\EdnaApi\bin\Release\net8.0\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "..\src\EdnaApi\bin\Release\net8.0\win-x64\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "..\dependencies\EzDnaApi64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "favicon.ico"; DestDir: "{app}"
 Source: "nssm.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "serviceRegister.bat"; DestDir: "{app}"; Flags: ignoreversion
